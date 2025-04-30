@@ -1,0 +1,38 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "balancefit api",
+    "version": "0.0.1",
+    "description": ""
+  },
+  "servers": [],
+  "paths": {},
+  "components": {
+    "schemas": {},
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      },
+      "OAuthLogin": {
+        "type": "oauth2",
+        "flows": {
+          "password": {
+            "tokenUrl": "/v1/auth/signin",
+            "scopes": []
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "OAuthLogin": []
+    },
+    {
+      "bearerAuth": []
+    }
+  ],
+  "tags": []
+}
